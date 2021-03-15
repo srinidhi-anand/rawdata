@@ -1,0 +1,33 @@
+#:import Factory kivy.factory.Factory
+
+<BoxLayout>:
+    height: 50
+
+GridLayout:
+    rows: 3
+    spacing: 100
+	BoxLayout:
+        size_hint_y: None
+        height: sp(40)
+		
+		Label:
+            text: 'Live Breath Analyser'
+			size_hint_x: 0.5
+			size_hint_y: 0.5
+            
+            pos_hint: { "top": 1, "left": 1 }
+			width:sp(15)
+			color:'#000000'
+		
+		
+    PulseMeter:
+        id: speed
+        max: 120
+		min :0
+        tick: 10
+        start_angle: -120
+        end_angle: 120
+        subtick: 5
+        value: 1
+        sectors: (0, '#ffffff')
+	
